@@ -80,19 +80,6 @@ def run():
     workers = list(map(lambda x: dict(x, **{'Homeless':True}) if x['organization'] == '' else dict(x, **{'Homeless':False}), DATA))
     old_people = list(map(lambda x: dict(x, **{'old':True}) if x['age'] > 30  else dict(x, **{'Old':False}), DATA))
 
-    '''
-    def homeless(values):
-        if values['organization'] == '':
-            values['Homeless'] = True
-        else:
-            values['Homeless'] = False
-        return values
-
-    workers = list(map(homeless, DATA))
-    '''
-
-    #old_people =  # Using map, generate a new list of people with a key 'old' with True or False values, if 'age' is greater than 30 or not
- 
     print('Python devs: ')
     
     for dev in all_python_devs:
